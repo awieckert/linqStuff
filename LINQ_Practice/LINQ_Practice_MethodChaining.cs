@@ -51,7 +51,7 @@ namespace LINQ_Practice
         [TestMethod]
         public void GetOldestStudent()
         {
-            var student = PracticeData/*FILL IN LINQ EXPRESSION*/;
+            var student = PracticeData.Max(x => x.Students.Select(n => n.Birthday));
             Assert.AreEqual(student, CohortBuilder.Student18);
         }
 
